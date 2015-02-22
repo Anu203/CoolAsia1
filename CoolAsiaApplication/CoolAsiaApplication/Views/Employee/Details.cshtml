@@ -1,0 +1,63 @@
+﻿@model CoolAsiaApplication.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.EmployeeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployeeName)
+    </div>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.JobTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.Salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salary)
+    </div>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.DateOfJoin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfJoin)
+    </div>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.LabelFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+    <div class="display-label">
+        @Html.LabelFor(model => model.Company.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company.CompanyName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

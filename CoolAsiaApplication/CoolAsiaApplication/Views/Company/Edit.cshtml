@@ -1,0 +1,54 @@
+﻿@model CoolAsiaApplication.Models.Company
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Company</legend>
+
+        @Html.HiddenFor(model => model.CompanyID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyName)
+            @Html.ValidationMessageFor(model => model.CompanyName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ComapnyAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ComapnyAddress)
+            @Html.ValidationMessageFor(model => model.ComapnyAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyPhone)
+            @Html.ValidationMessageFor(model => model.CompanyPhone)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
